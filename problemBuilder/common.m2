@@ -68,7 +68,7 @@ randKernel (Matrix, Type) := o -> (M, FF) -> (
     if instance(FF, InexactFieldFamily) then error "please give precision explicitly";
     K := if char FF > 0 
     then gens ker M
-    else numericalKernel(M, o.Tolerance);
+    else numericalKernel(M, Tolerance => o.Tolerance);
     K*random(FF^(numcols K), FF^1)
     )
 randKernel Matrix := o -> M -> randKernel(M, ring M)

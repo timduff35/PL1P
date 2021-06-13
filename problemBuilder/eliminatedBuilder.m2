@@ -106,7 +106,7 @@ fabricateYC = (Dpl1p, FF, cameraMatrixEvaluators) -> (
     imgData := apply(sampleC, cam-> (cam * worldPoints, cam * worldHelperPoints));
     -- get parameters defining visible (independent + dependent) and ghost lines
     landA := for v from 0 to 2 list(
-	indLines := new HashTable from apply(independentLines#v,l->l=>(numericalKernel(transpose imgData#v#1#l, kTol)));
+	indLines := new HashTable from apply(independentLines#v,l->l=>(numericalKernel(transpose imgData#v#1#l, Tolerance => kTol)));
 	depLines := apply(dependentLines#v,l->(
 		k := numericalKernel(transpose imgData#v#1#(l#0), kTol);
 		solve(indLines#(l#1#0)|indLines#(l#1#1),k,ClosestFit=> true)
