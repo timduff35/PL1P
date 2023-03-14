@@ -5,7 +5,7 @@ Data and Code accompanying the article [Point-line minimal problems with partial
 ## Summary of Data
 
 1.  One 11 MB tar file [all-PL1Ps.tar.gz](https://github.com/timduff35/PL1P/blob/master/all-PL1Ps.tar.gz) containing the results of an initial rank check, produced by the script [run-checkRank.sh](https://github.com/timduff35/PL1P/blob/master/run-checkRank.sh)
-2.  Problem indices relevant for various experiments are in the subdirectory `/candidates'. For example, Result 8 in the paper refers to the [74545 problem indices here](https://github.com/timduff35/PL1P/tree/master/candidates/camMin.txt) and the [140616 problem indices here](https://github.com/timduff35/PL1P/tree/master/candidates/min.txt).
+2.  Problem indices relevant for various experiments are in the subdirectory `candidates/'. For example, Result 8 in the paper refers to the [74545 problem indices here](https://github.com/timduff35/PL1P/tree/master/candidates/camMin.txt) and the [140616 problem indices here](https://github.com/timduff35/PL1P/tree/master/candidates/min.txt).
 3. Data produced for degree computations were saved on CIIRC CTU cluster. See [examples.m2](https://github.com/timduff35/PL1P/blob/master/examples.m2) for an example, including syntax for re-starting computations.
 
 
