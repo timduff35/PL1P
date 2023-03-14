@@ -1,4 +1,4 @@
-Data and Code accompanying the article [Point-line minimal problems with partial visibility](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123710171.pdf) (Duff, Kohn, Leykin Pajdla, ECCV 2020.)
+[Data](https://github.com/timduff35/PL1P#data) and [code](https://github.com/timduff35/PL1P#code) accompanying the article [Point-line minimal problems with partial visibility](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123710171.pdf) (Duff, Kohn, Leykin Pajdla, ECCV 2020.)
 
 # Data 
 
