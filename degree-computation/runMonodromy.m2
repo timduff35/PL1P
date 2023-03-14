@@ -185,9 +185,9 @@ refreshMonodromy (ZZ, String) := o -> (n, inFilePath) -> (
     value \ drop(f,1);
     (F, y0, c0, Dpl1p, cameraMatrixEvaluators, CoLmatrices, CoPmatrices) := eliminatedBuilder(pl1p, CC_53);
     Fsq := squareDown(point{p0}, point{first sols0}, F);
-    G := homotopyGraph(Fsq, Randomizer => (y -> gammifyElim(y, Dpl1p)));
+    G := homotopyGraph(Fsq, Equivalencer => (y -> y), Randomizer => (y -> gammifyElim(y, Dpl1p)), Verbose => MONODROMYOPTIONS.Verbose);
     goodSols0 := for i from 0 to #sols0-1 list if not member(i, badIndices#0) then point{sols0#i};
-    goodSols1 := for i from 0 to #sols0-1 list if not member(i, badIndices#1) then point{sols1#i};
+    goodSols1 := for i from 0 to #sols1-1 list if not member(i, badIndices#1) then point{sols1#i};
     n1 := addNode(G, point{p0}, pointArray(goodSols0));
     n2 := addNode(G, point{p1}, pointArray(goodSols1));
     for i from 0 to o.NumberOfEdges do addEdge(G,n1,n2);
@@ -237,7 +237,7 @@ refreshMonodromy (ZZ, String) := o -> (n, inFilePath) -> (
     	    first G.Vertices, 
     	    Verbose=>true, 
     	    StoppingCriterion => (
-	    	(n,L) -> (length L >= targetSolCount or n >= o.NumberOfRepeats)
+	    	(n, G) -> (max toList apply(G.Vertices, v -> length v.PartialSols) >= targetSolCount or n >= o.NumberOfRepeats)
 	    	),
     	    SelectEdgeAndDirection => selectRandomEdgeAndDirection,
     	    BatchSize => infinity,

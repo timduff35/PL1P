@@ -57,6 +57,7 @@ tikzPL1P List := o -> pl1p -> (
     out <<  "%%% end PL1P %%%\n"
     )   
 
+-- assumes program "evince" is installed
 viewPL1P = method(Options=>{Vertical=>false})
 viewPL1P List := o -> pl1p -> (
     filename := temporaryFileName ();
