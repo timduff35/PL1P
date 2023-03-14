@@ -44,10 +44,12 @@ tally apply(trueNegatives,i->(
     )
 
 f = openOut "negatives"
+f << "trueNegativeSet = "
 f << trueNegatives
 close f
 
 falseNegatives = set (first \ negatives) - set(trueNegatives)
 f = openOut "false-negatives"
+f << "falseNegativeSet = "
 f << falseNegatives
 close f
