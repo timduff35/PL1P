@@ -19,13 +19,13 @@ cd pl1p/problems
 tar -xvf ../all-PL1Ps.tar.gz
 ```
 
-The last line, which may take a minute or two, populates 144 subdirectories of the directory problems.
+The last line, which may take a minute or two, populates 144 subdirectories of the directory "problems/".
 These subdirectories are named 000/, 001/, ..., 143/.
 Directories 000 through 142 contain 100 "problem files" each.
 Directory 143 contains 94 problem files.
 This gives a grand total of 143494 candidates for the reduced minimal problems, as described in Section 7 of the paper.
 
-A problem file "ABC.pl1p" in directory "DEF/" corresponds to a problem ID "ABCDEF" in the indical data described above.
+A problem file "DEF.pl1p" in directory "ABC/" corresponds to a problem ID "ABCDEF" in the indical data described above.
 
 ## Example problem file
 
