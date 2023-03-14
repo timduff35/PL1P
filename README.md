@@ -11,7 +11,7 @@ Data and Code accompanying the article [Point-line minimal problems with partial
 
 ## Getting started
 
-First, clone the repository, then unpack `all-PL1Ps.tar.gz` into the subdirectory `/problems'.
+First, clone the repository, then unpack `all-PL1Ps.tar.gz` into the subdirectory `problems/'.
 ```
 mkdir pl1p
 git clone git@github.com:timduff35/PL1P.git pl1p
